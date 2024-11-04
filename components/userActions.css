@@ -1,0 +1,10 @@
+.actions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+}
+
+.actions-container img{
+    width: 1.5em;
+}
