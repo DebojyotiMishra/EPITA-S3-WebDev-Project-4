@@ -1,7 +1,7 @@
-import { cardComponent } from './components/cardComponent'
-import { cardImage } from './components/cardImage'
-import { usersActions } from './components/userActions'
-import { usersData } from './components/usersData'
+import { cardComponent } from './components/cardComponent.js'
+import { cardImage } from './components/cardImage.js'
+import { usersActions } from './components/userActions.js'
+import { usersData } from './components/usersData.js'
 import './style.css'
 
 const imageOne = cardComponent()
