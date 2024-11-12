@@ -17,13 +17,35 @@ export const usersActions = () => {
 }
 
 function buttonOneClick(e) {
+	const selectedCard = e.target.parentElement.parentElement
+	const userId = selectedCard.getAttribute("userId")
+	const firstName = selectedCard.getAttribute("firstName")
+	const lastName = selectedCard.getAttribute("lastName")
 	document.querySelector(".modal-overlay").classList.toggle("show")
-	const userId = e.target.parentElement.parentElement.getAttribute("userId")
-	console.log(userId)
+	document.querySelector(".modal-container").innerHTML = ""
+	document.querySelector(".modal-title").innerText = "Edit user"
+	document
+		.querySelector(".modal-container")
+		.appendChild(formComp(firstName, lastName, userId))
 }
 
 function buttonTwoClick(e) {
+	const selectedCard = e.target.parentElement.parentElement
+	const userId = selectedCard.getAttribute("userId")
 	document.querySelector(".modal-overlay").classList.toggle("show")
-	const userId = e.target.parentElement.parentElement.getAttribute("userId")
-	console.log(userId)
+	document.querySelector(".modal-container").innerHTML = ""
+	document.querySelector(".modal-title").innerText = "Warning !"
+	document.querySelector(".modal-container").innerText =
+		"Confirm delete user? You sure ?"
+
+	const confirmBtn = document.createElement("button")
+	confirmBtn.style.backgroundColor = "#d5384f"
+	confirmBtn.innerText = "Confirm"
+	confirmBtn.addEventListener("click", async () => {
+		const response = await deleteUser(userId)
+		if (response.message === "User deleted !") {
+			init()
+		}
+	})
+	document.querySelector(".modal-container").appendChild(confirmBtn)
 }
