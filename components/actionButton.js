@@ -12,10 +12,11 @@ export const actionButton = (icon, className, onClick) => {
   buttonElement.classList.add(className);
   const deleteImg = new Image();
   deleteImg.src = icon;
+  deleteImg.style.pointerEvents = "none";
   buttonElement.appendChild(deleteImg);
 
-  buttonElement.addEventListener("click", () => {
-    onClick();
+  buttonElement.addEventListener("click", (e) => {
+    onClick(e);
   });
 
   return buttonElement;

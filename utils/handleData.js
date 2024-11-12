@@ -5,10 +5,13 @@ import { usersData } from '../components/usersData.js'
 
 export function handleData(usersArray) {
 	usersArray.forEach((user) => {
+        console.log(user)
+
 		const cardArticle = cardComponent()
-		cardArticle.appendChild(cardImage())
-		cardArticle.appendChild(usersData())
-		cardArticle.appendChild(usersActions())
+		cardArticle.setAttribute("userId", user.id)
+        cardArticle.appendChild(cardImage(user.profileImg))
+        cardArticle.appendChild(usersData(user.firstName, user.lastName))
+        cardArticle.appendChild(usersActions())
 
 		app.appendChild(cardArticle)
 	})

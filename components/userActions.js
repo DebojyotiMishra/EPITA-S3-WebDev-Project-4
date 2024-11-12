@@ -16,9 +16,14 @@ export const usersActions = () => {
 	return actionsContainer
 }
 
-function buttonOneClick() {
-	document.querySelector(".modal-overlay").classList.toggle("show")}
-
-function buttonTwoClick() {
+function buttonOneClick(e) {
 	document.querySelector(".modal-overlay").classList.toggle("show")
+	const userId = e.target.parentElement.parentElement.getAttribute("userId")
+	console.log(userId)
+}
+
+function buttonTwoClick(e) {
+	document.querySelector(".modal-overlay").classList.toggle("show")
+	const userId = e.target.parentElement.parentElement.getAttribute("userId")
+	console.log(userId)
 }
