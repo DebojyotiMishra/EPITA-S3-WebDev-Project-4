@@ -1,8 +1,8 @@
 // import "./formComp.css"
 import { inputComp } from "./inputComp"
-import { updateUser } from "../utils/updateUser"
-import { fetchUsers } from "../utils/fetchData"
-import { handleData } from "../utils/handleData"
+import { updateUser } from "../utils/updateUsers.js"
+import { fetchUsers } from "../utils/fetchData.js"
+import { handleData } from "../utils/handleData.js"
 import { modalComp } from "./modalComp"
 
 /**

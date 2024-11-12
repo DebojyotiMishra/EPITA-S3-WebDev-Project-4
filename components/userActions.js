@@ -2,6 +2,7 @@ import "./userActions.css"
 import { actionButton } from "./actionButton"
 import edit from "../assets/edit.svg"
 import trash from "../assets/trash.svg"
+import { formComp } from "./formComp"
 
 export const usersActions = () => {
 	const actionsContainer = document.createElement("div")
