@@ -17,9 +17,8 @@ export const usersActions = () => {
 }
 
 function buttonOneClick() {
-    console.log("Button One clicked")
-}
+	document.querySelector(".modal-overlay").classList.toggle("show")}
 
 function buttonTwoClick() {
-    console.log("Button Two clicked")
+	document.querySelector(".modal-overlay").classList.toggle("show")
 }

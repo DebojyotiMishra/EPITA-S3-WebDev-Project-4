@@ -1,14 +1,10 @@
-import { cardComponent } from './components/cardComponent.js'
-import { cardImage } from './components/cardImage.js'
-import { usersActions } from './components/userActions.js'
-import { usersData } from './components/usersData.js'
+// Helper Functions
+import { fetchUsers } from './utils/fetchData.js'
+import { handleData } from './utils/handleData.js'
+import { modalComp } from "./components/modalComp"
 
 import './style.css'
-import { fetchUsers } from './utils/fetchData.js'
 
-const imageOne = cardComponent()
-imageOne.appendChild(cardImage())
-imageOne.appendChild(usersData())
-imageOne.appendChild(usersActions())
-
-app.appendChild(imageOne)
+const usersArray = await fetchUsers()
+if (usersArray.length) handleData(usersArray) 
+app.appendChild(modalComp())

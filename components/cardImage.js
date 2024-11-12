@@ -1,11 +1,11 @@
 import "./cardImage.css";
 
-export const cardImage = () => {
+export const cardImage = (cardImage) => {
     const cardDiv = document.createElement("div");
     cardDiv.classList.add("card-image");
 
     const img = new Image();
-    img.src = "https://xsgames.co/randomusers/assets/avatars/male/31.jpg";
+    img.src = cardImage || "https://via.placeholder.com/150";
     img.alt = "Avatar";
 
     cardDiv.appendChild(img);
