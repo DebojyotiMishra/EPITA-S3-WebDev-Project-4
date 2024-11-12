@@ -16,6 +16,7 @@ export const modalComp = () => {
 
 	const modalHeader = document.createElement("header")
 	const modalTitle = document.createElement("h2")
+    modalTitle.classList.add("modal-title")
 	modalTitle.innerText = "Title test"
 
 	const closeBtn = document.createElement("button")
