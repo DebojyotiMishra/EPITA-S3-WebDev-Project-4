@@ -26,6 +26,8 @@
     max-width: 600px;
     width: auto;
     color: #242424;
+    border-radius: 8px;
+    padding: 16px;
 }
 
 .modal-content .btn-close {
@@ -37,6 +39,16 @@
     background-color: #fff;
     color: #242424;
     transition: all ease-in-out 230ms;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    display: block;
+    margin: auto;
+}
+
+.modal-content input {
+    margin-left: 10px;
 }
 
 .modal-content .btn-close:hover {

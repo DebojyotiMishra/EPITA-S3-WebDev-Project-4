@@ -3,6 +3,8 @@ import { actionButton } from "./actionButton"
 import edit from "../assets/edit.svg"
 import trash from "../assets/trash.svg"
 import { formComp } from "./formComp"
+import { deleteUser } from "../utils/fetchData"
+import { init } from "../main"
 
 export const usersActions = () => {
 	const actionsContainer = document.createElement("div")
